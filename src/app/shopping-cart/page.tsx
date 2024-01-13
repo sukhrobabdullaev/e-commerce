@@ -209,12 +209,15 @@ const ShoppingCart = () => {
         </div>
       ) : (
         <div className="w-full h-screen flex flex-col items-center justify-center">
-          <Image
-            src={"/notFound.png"}
-            alt="not found"
-            width={400}
-            height={500}
-          />
+          <div className="relative">
+            <Image
+              src={"/notFound.png"}
+              alt="not found"
+              width={400}
+              height={400}
+              priority
+            />
+          </div>
           <div className="flex flex-col items-center justify-center">
             <p className="text-3xl md:text-4xl lg:text-5xl text-gray-800 mt-12">
               Shopping cart is empty
@@ -222,8 +225,7 @@ const ShoppingCart = () => {
             <p className="md:text-lg lg:text-xl text-gray-600 mt-8">
               Sorry, you don't have any product so far
             </p>
-            <a
-              href="#"
+            <div
               className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 mt-12 rounded transition duration-150"
               title="Return Home"
             >
@@ -234,13 +236,13 @@ const ShoppingCart = () => {
                 fill="currentColor"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 ></path>
               </svg>
               <Link href="/">Return Home</Link>
-            </a>
+            </div>
           </div>
         </div>
       )}

@@ -5,7 +5,7 @@ import { ProductType } from "@/interfaces";
 const Home = async () => {
   const res = await fetch("https://fakestoreapi.com/products/");
   const products: ProductType[] = await res.json();
-  console.log(products);
+  // console.log(products);
 
   return (
     <main className="min-h-screen max-w-7xl mx-auto px-8 xl:px-0 mt-30">
