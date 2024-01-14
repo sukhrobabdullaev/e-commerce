@@ -10,9 +10,16 @@ import { useEffect, useState } from "react";
 
 const ShoppingCart = () => {
   const [total, setTotal] = useState<number>(0);
-  const [products, setProducts] = useState<ProductType[]>(
-    JSON.parse(localStorage.getItem("carts") as string) || []
-  );
+  const [products, setProducts] = useState<ProductType[]>([]);
+
+  useEffect(() => {
+    // Check if running on the client side
+    if (typeof window !== "undefined") {
+      const savedProducts =
+        JSON.parse(localStorage.getItem("carts") as string) || [];
+      setProducts(savedProducts);
+    }
+  }, []);
 
   const removeCart = (id: number) => {
     const updateCart = products.filter((product) => product.id !== id);
