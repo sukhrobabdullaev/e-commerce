@@ -8,3 +8,4 @@ export interface ProductType {
   quantity: number;
   rating: { rate: number; count: number };
 }
+

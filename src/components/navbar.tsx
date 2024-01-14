@@ -18,17 +18,20 @@ const Navbar = () => {
         />
       </Link>
 
-      <div className="flex items-center space-x-2.5 text-sm">
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <Link href={"/"} className="mr-5 hover:text-gray-900">
-            Home page
+      <div className="flex items-center md:space-x-2.5 space-x-1 text-sm">
+        <nav className="md:ml-auto flex md:flex-wrap md:items-center text-base gap-2 flex-row md:justify-center">
+          <Link href={"/"} className="md:mr-5 hover:text-gray-900 text-base">
+            Home
           </Link>
-          <Link href={"/products"} className="mr-5 hover:text-gray-900 ">
-            All products
+          <Link
+            href={"/products"}
+            className="md:mr-5 hover:text-gray-900  text-base"
+          >
+            Products
           </Link>
         </nav>
         <Link href={"/shopping-cart"}>
-          <button className="button bg-blue-600 text-white border-transparent hover:border-blue-600 hover:bg-transparent hover:text-black">
+          <button className="button  bg-blue-600 text-white border-transparent hover:border-blue-600 hover:bg-transparent hover:text-black">
             My bag
           </button>
         </Link>

@@ -4,7 +4,7 @@
 
 @layer components {
   .button {
-    @apply border px-5 md:px-10 py-2.5 rounded font-semibold transition duration-200 ease-out;
+    @apply border p-2 md:px-10 rounded font-semibold transition duration-200 ease-out;
   }
 }
 
